@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FloatingThemeToggle } from '@/components/FloatingThemeToggle';
 import { Link, useNavigate } from 'react-router-dom';
 import { useGuestBook } from '@/context/GuestBookContext';
 import { Button } from '@/components/ui/button';
@@ -46,6 +47,7 @@ const AddEntry = () => {
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center p-4">
+      <FloatingThemeToggle />
         <Card className="max-w-md w-full text-center animate-scale-in">
           <CardContent className="pt-12 pb-8">
             <div className="w-20 h-20 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-6">

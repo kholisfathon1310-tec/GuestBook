@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { GuestBookProvider } from "@/context/GuestBookContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 import Landing from "./pages/Landing";
 import GuestBook from "./pages/GuestBook";
 import AddEntry from "./pages/AddEntry";
@@ -15,6 +16,7 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
+    <ThemeProvider>
     <TooltipProvider>
       <GuestBookProvider>
         <Toaster />
@@ -31,6 +33,7 @@ const App = () => (
         </BrowserRouter>
       </GuestBookProvider>
     </TooltipProvider>
+    </ThemeProvider>
   </QueryClientProvider>
 );
 

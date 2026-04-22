@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FloatingThemeToggle } from '@/components/FloatingThemeToggle';
 import { Link } from 'react-router-dom';
 import { useGuestBook } from '@/context/GuestBookContext';
 import { Button } from '@/components/ui/button';
@@ -13,6 +14,7 @@ const GuestBook = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <FloatingThemeToggle />
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">

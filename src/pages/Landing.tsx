@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
+import { FloatingThemeToggle } from '@/components/FloatingThemeToggle';
 import { Button } from '@/components/ui/button';
 import { BookOpen, UserCog, Sparkles } from 'lucide-react';
 
 const Landing = () => {
   return (
     <div className="min-h-screen bg-background">
+      <FloatingThemeToggle />
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         {/* Decorative elements */}
